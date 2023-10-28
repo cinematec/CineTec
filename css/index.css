@@ -46,12 +46,22 @@ footer {
   background-color:rgb(17,17,18);
   color:rgb(255,255,255);
   text-align:center;
-  padding:16px;
+  padding:8px;
   border-color:rgb(17,17,18);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:row;
 }
 footer a {
   color:rgb(255,221,4);
   text-decoration:none;
+}
+footer #icone-insta {
+  width:50px;
+}
+footer #icone-zap {
+  width:58px;
 }
 footer a:hover {
   color:rgb(31,255,238);
