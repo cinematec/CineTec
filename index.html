@@ -16,18 +16,26 @@
 </head>
 <body>
   <header>
-    <h2>Cine Tec</h2>
-    <p>Venha assistir os melhores filmes</p>
-    <nav><span class="material-symbols-rounded">menu</span></nav>
-    <menu>
-      
-    </menu>
+    <h1>Cine Tec</h1>
+    <span class="material-symbols-rounded" onclick="open_menu()"  ondblclick="close_menu()" id="botao">menu</span>
   </header>
   <main>
     <p></p>
   </main>
   <footer>
-    <p>Site desenvolvido por <a href="https://Instagram.com/" target="_blank">Instagram</a></p>
+    <p>Segue a gente pelo nosso <a href="https://Instagram.com/2teceeqs" target="_blank">Instagram</a></p>
   </footer>
+  <script>
+    function open_menu() {
+      const botao = document.querySelector("#botao");
+      botao.innerHTML = "";
+      botao.innerHTML = "close";
+    }
+    function close_menu() {
+      const botao = document.querySelector("#botao");
+      botao.innerHTML = "";
+      botao.innerHTML = "menu";
+    }
+  </script>
 </body>
 </html>
