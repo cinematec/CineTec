@@ -17,7 +17,6 @@ header {
   justify-content:space-between;
   width:100%;
   padding:16px;
-  position:fixed;
 }
 main {
   background-color:rgb(32,32,32);
@@ -25,34 +24,38 @@ main {
   overflow:hidden;
   height:100%;
   width:100%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  flex-direction:row;
 }
-main fieldset {
+.container {
+  background-color:black;
+  padding:6px;
+  color:white;
+  overflow:hidden;
+  display:flex;
+  flex-direction:row;
+
+}
+.container fieldset {
   background-color:#00000000;
-  border:3px solid rgba(255,255,255,0.15);
+  border:3px solid white;
   border-radius:18px;
   height:250px;
   width:200px;
   margin:10px;
 }
-main fieldset > legend {
+.container fieldset > legend {
   position:absolute;
   background-color:white;
   border-radius:6px;
   border-top-left-radius:10px;
   border-top-right-radius:0px;
   padding:5px;
-  color:white;
+  color:black;
   backdrop-filter:blur(15px);
-  background:rgba(255,255,255,0.15);
   box-shadow:0 0 10px 1px rgba(0,0,0,0.35);
   -webkit-backdrop-filter:blur(15px);
   text-align:center;
 }
-main fieldset > img {
+.container fieldset > img {
   border-radius:18px;
   height:100%;
   width:100%;
