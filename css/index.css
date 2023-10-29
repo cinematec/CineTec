@@ -25,12 +25,37 @@ main {
   overflow:hidden;
   height:100%;
   width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:row;
 }
-main >p {
-  animation:appear 1ms ease-in-out;
-  animation-timeline:view();
-  padding-block:var(--scroll-height);
-  animation-range:cover 0% cover 50%;
+main fieldset {
+  background-color:#00000000;
+  border:3px solid rgba(255,255,255,0.15);
+  border-radius:18px;
+  height:250px;
+  width:200px;
+  margin:10px;
+}
+main fieldset > legend {
+  position:absolute;
+  background-color:white;
+  border-radius:6px;
+  border-top-left-radius:10px;
+  border-top-right-radius:0px;
+  padding:5px;
+  color:white;
+  backdrop-filter:blur(15px);
+  background:rgba(255,255,255,0.15);
+  box-shadow:0 0 10px 1px rgba(0,0,0,0.35);
+  -webkit-backdrop-filter:blur(15px);
+  text-align:center;
+}
+main fieldset > img {
+  border-radius:18px;
+  height:100%;
+  width:100%;
 }
   @keyframes appear {
   from{
@@ -54,16 +79,31 @@ footer {
   flex-direction:row;
 }
 footer a {
-  color:rgb(255,221,4);
+  margin:15px;
+}
+footer #link-insta {
+  background-color:white;
+  border-radius:50%;
   text-decoration:none;
+  height:40px;
+  width:40px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+footer #link-whatszap {
+  background-color:white;
+  border-radius:50%;
+  text-decoration:none;
+  height:30px;
+  width:30px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 footer #icone-insta {
   width:50px;
 }
 footer #icone-zap {
   width:58px;
-}
-footer a:hover {
-  color:rgb(31,255,238);
-  text-decoration:underline;
 }
