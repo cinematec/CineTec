@@ -1,0 +1,38 @@
+main {
+  background-color:rgb(32,32,32);
+  color:white;
+  overflow:hidden;
+  height:100%;
+  width:100%;
+  margin-bottom:5px;
+}
+.container {
+  background-color:black;
+  padding:6px;
+  color:white;
+  overflow:hidden;
+  display:flex;
+  flex-direction:row;
+}
+.container fieldset {
+  background-color:#00000000;
+  border:3px solid white;
+  border-radius:18px;
+  height:250px;
+  width:200px;
+  margin:10px;
+}
+.container fieldset > legend {
+  position:absolute;
+  background-color:white;
+  border-radius:6px;
+  border-top-left-radius:10px;
+  border-top-right-radius:0px;
+  padding:5px;
+  color:black;
+}
+.container fieldset > img {
+  border-radius:18px;
+  height:100%;
+  width:100%;
+}

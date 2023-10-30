@@ -12,12 +12,33 @@
   <link rel="shortcut icon" type="image/x-icon" href="images/favicon.jpg">
   <title>Cine Tec</title>
   <link rel="stylesheet" href="css/index.css" media="all">
+  <link rel="stylesheet" href="css/button.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/footer.css">
   <script src="js/index.js" defer></script>
+  <script src="js/menu.js" defer></script>
 </head>
 <body>
   <header>
     <h1>Cine Tec</h1>
-    <span class="material-symbols-rounded" onclick="open_menu()"  ondblclick="close_menu()" id="botao">menu</span>
+    <div class="botao" id="botao">
+      <input type="checkbox" id="button" name="button">
+      <label for="button">
+        <span id="span"></span>
+        <span id="span"></span>
+        <span id="span"></span>
+      </label>
+    </div>
+    <nav>
+      <menu id="menu">
+        <ul>
+          <li><a href="#">Quem somos nós?</a></li>
+          <li><a href="#">Próximos lançamentos</a></li>
+          <li><a href="#">Central de Ajuda</a></li>
+        </ul>
+      </menu>
+    </nav>
   </header>
   <main>
     <div class="container">
@@ -51,19 +72,7 @@
   </main>
   <footer>
     <p><a href="https://Instagram.com/2teceeqs" target="_blank" id="link-insta"><img src="images/insta.png" alt="icone do Instagram" id="icone-insta"></a></p>
-    <p><a href="https://api.whatsapp.com/send?phone=558496218825" target="_blank" id="link-whatszap"><img src="images/whatsapp.png" alt="icone do Whatsapp" id="icone-zap"></a></p>
+    <p><a href="https://api.whatsapp.com/send?phone=558481634134" target="_blank" id="link-whatszap"><img src="images/whatsapp.png" alt="icone do Whatsapp" id="icone-zap"></a></p>
   </footer>
-  <script>
-    function open_menu() {
-      const botao = document.querySelector("#botao");
-      botao.innerHTML = "";
-      botao.innerHTML = "close";
-    }
-    function close_menu() {
-      const botao = document.querySelector("#botao");
-      botao.innerHTML = "";
-      botao.innerHTML = "menu";
-    }
-  </script>
 </body>
 </html>

@@ -1,0 +1,41 @@
+footer {
+  background-color:rgb(17,17,18);
+  color:rgb(255,255,255);
+  text-align:center;
+  padding:8px;
+  border-color:rgb(17,17,18);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:row;
+  margin-top:5px;
+}
+footer a {
+  margin:15px;
+}
+footer #link-insta {
+  background-color:white;
+  border-radius:50%;
+  text-decoration:none;
+  height:40px;
+  width:40px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+footer #link-whatszap {
+  background-color:white;
+  border-radius:50%;
+  text-decoration:none;
+  height:30px;
+  width:30px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+footer #icone-insta {
+  width:50px;
+}
+footer #icone-zap {
+  width:58px;
+}
