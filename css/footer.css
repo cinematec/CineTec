@@ -12,6 +12,10 @@ footer {
 }
 footer a {
   margin:15px;
+  transition:.8s;
+}
+footer a:hover {
+  cursor:pointer;
 }
 footer #link-insta {
   background-color:white;
@@ -23,6 +27,11 @@ footer #link-insta {
   align-items:center;
   justify-content:center;
 }
+footer #link-insta:hover {
+  background-color:#ff245f;
+  box-shadow:20px 16px 36px #ff245f;
+  transform:scale(1.12);
+}
 footer #link-whatszap {
   background-color:white;
   border-radius:50%;
@@ -33,9 +42,24 @@ footer #link-whatszap {
   align-items:center;
   justify-content:center;
 }
+footer #link-whatszap:hover {
+  background-color:#24ff51;
+  box-shadow:20px 16px 36px #24ff51;
+  transform:scale(1.12);
+}
 footer #icone-insta {
   width:50px;
+  transition:.8s;
+}
+footer #icone-insta:hover {
+  /*border:1px solid #ff245f;
+  border-radius:50%;*/
 }
 footer #icone-zap {
   width:58px;
+  transition:.8s;
+}
+footer #icone-zap:hover {
+ /* border-radius:50%;
+  border:1px solid #24ff51;*/
 }
