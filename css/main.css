@@ -5,14 +5,22 @@ main {
   height:100%;
   width:100%;
   margin-bottom:5px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.carrossel {
+  background-color:rgb(17,17,18);
+  height:500px;
+  width:500px;
+  overflow:hidden;
 }
 .container {
-  background-color:black;
   padding:6px;
   color:white;
-  overflow:hidden;
   display:flex;
-  flex-direction:row;
+  align-items:center;
+  justify-content:center;
 }
 .container fieldset {
   background-color:#00000000;
@@ -23,7 +31,6 @@ main {
   margin:10px;
 }
 .container fieldset > legend {
-  position:absolute;
   background-color:white;
   border-radius:6px;
   border-top-left-radius:10px;

@@ -22,17 +22,19 @@
 </head>
 <body>
   <header>
+    <section>
     <h1>Cine Tec</h1>
     <div class="botao" id="botao">
-      <input type="checkbox" id="button" name="button">
+      <input type="checkbox" id="button" name="button" onclick="clickMenu()">
       <label for="button">
         <span id="span"></span>
         <span id="span"></span>
         <span id="span"></span>
       </label>
     </div>
+    </section>
     <nav>
-      <menu class="menu" id="menu">
+      <menu id="itens">
         <ul>
           <li><a href="#">Quem somos nós?</a></li>
           <li><a href="#">Próximos lançamentos</a></li>
@@ -42,6 +44,7 @@
     </nav>
   </header>
   <main>
+    <div class="carrossel">
     <div class="container">
     <fieldset>
       <legend>02/11</legend>
@@ -69,6 +72,7 @@
       <legend>22/11</legend>
       <img src="images/filme03.jpg" alt="filme03">
     </fieldset>
+    </div>
     </div>
   </main>
   <footer>

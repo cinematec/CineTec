@@ -1,5 +1,7 @@
-const botao = document.querySelector(".botao");
-const menu = document.querySelector("#menu");
-botao.addEventListener("click", () => {
-  menu.classList.toggle("show-menu");
-});
+function clickMenu() {
+  if(itens.style.display == 'block') {
+    itens.style.display = 'none';
+  }else {
+    itens.style.display = 'block';
+  }
+}
