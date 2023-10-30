@@ -31,6 +31,7 @@ main {
   margin:10px;
 }
 .container fieldset > legend {
+  position:absolute;
   background-color:white;
   border-radius:6px;
   border-top-left-radius:10px;
