@@ -1,6 +1,7 @@
 header {
   background-color:rgb(17,17,18);
   border-color:rgb(17,17,18);
+  border-bottom:2px solid white;
   outline-color:rgb(17,17,18);
   color:rgb(255,255,255);
 }

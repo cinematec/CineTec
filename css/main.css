@@ -8,36 +8,54 @@ main {
   display:flex;
   align-items:center;
   justify-content:center;
+  flex-direction: column;
 }
 .carrossel {
   background-color:rgb(17,17,18);
-  height:500px;
-  width:500px;
-  border-radius:18px;
+  width:100%;
   overflow:hidden;
+  margin:5px;
+  padding:16px;
+}
+.carrossel h2 {
+  width:100%;
+  margin-bottom:10px;
+  padding:16px;
+  padding-bottom:22px;
+  text-align: center;
+  border-bottom:2px solid white;
 }
 .container {
-  height:100%;
-  width:100%;
-  padding:6px;
   color:white;
   display:flex;
   align-items:center;
-  justify-content:center;
-  flex-direction: row;
+  justify-content:space-between;
+  flex-direction:row;
   flex-wrap:nowrap;
   overflow:hidden;
+}
+@media screen and (width>600px) {
+  .container {
+    justify-content:space-around;
+  }
 }
 .container fieldset {
   background-color:#00000000;
   border:3px solid white;
   border-radius:18px;
   height:250px;
-  width:100%;
+  width:200px;
   display:flex;
+  margin:5px;
+}
+@media screen and (width<=600px) {
+  .carrosel {
+    overflow-x:auto;
+  }
+
 }
 .container fieldset > legend {
-  position:relative;
+  position:absolute;
   background-color:white;
   border-radius:6px;
   border-top-left-radius:10px;
