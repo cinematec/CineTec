@@ -2,7 +2,7 @@ footer {
   background-color:rgb(17,17,18);
   color:rgb(255,255,255);
   text-align:center;
-  padding:8px;
+  padding:3px;
   border-color:rgb(17,17,18);
   display:flex;
   align-items:center;
@@ -29,7 +29,7 @@ footer #link-insta {
 }
 footer #link-insta:hover {
   background-color:#ff245f;
-  box-shadow:20px 16px 36px #ff245f;
+  box-shadow:3px 2px 40px #ff245f;
   transform:scale(1.12);
 }
 footer #link-whatszap {
@@ -44,7 +44,7 @@ footer #link-whatszap {
 }
 footer #link-whatszap:hover {
   background-color:#24ff51;
-  box-shadow:20px 16px 36px #24ff51;
+  box-shadow:3px 2px 40px #24ff51;
   transform:scale(1.12);
 }
 footer #icone-insta {

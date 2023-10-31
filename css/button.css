@@ -5,6 +5,12 @@
   align-items:center;
   justify-content:center;
 }
+label {
+  transition:.4s;
+}
+label:hover {
+  transform:scale(1.08);
+}
 #button {
   display:none;
 }
