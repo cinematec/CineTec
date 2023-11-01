@@ -17,6 +17,15 @@ main {
   margin:5px;
   padding:16px;
 }
+@media screen and (width<=800px) {
+  main {
+    height:100%;
+    margin:0;
+  }
+  .carrossel {
+    margin:0px;
+  }
+}
 .carrossel h2 {
   width:100%;
   margin-bottom:10px;
@@ -34,7 +43,7 @@ main {
   flex-wrap:nowrap;
   overflow:hidden;
 }
-@media screen and (width>600px) {
+@media screen and (width>800px) {
   .container {
     justify-content:space-around;
   }
@@ -48,7 +57,7 @@ main {
   display:flex;
   margin:5px;
 }
-@media screen and (width<=600px) {
+@media screen and (width<=800px) {
   .carrosel {
     overflow-x:auto;
   }

@@ -10,6 +10,11 @@ footer {
   flex-direction:row;
   margin-top:5px;
 }
+@media screen and (width<=600px) {
+  footer {
+    margin:0px;
+  }
+}
 footer a {
   margin:15px;
   transition:.8s;
