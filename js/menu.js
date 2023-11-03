@@ -1,7 +1,9 @@
 function clickMenu() {
-  if(itens.style.display == 'block') {
-    itens.style.display = 'none';
+  if(itens.style.opacity == 1) {
+    itens.style.opacity = 0;
+    itens.style.height = 0;
   }else {
-    itens.style.display = 'block';
+    itens.style.opacity = 1;
+    itens.style.height = 'auto';
   }
 }

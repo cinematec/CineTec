@@ -26,7 +26,7 @@ main {
     margin:0px;
   }
 }
-.carrossel h2 {
+.carrossel >h2 {
   width:100%;
   margin-bottom:10px;
   padding:16px;
@@ -35,9 +35,10 @@ main {
   border-bottom:2px solid white;
 }
 .container {
+  height:800px;
   color:white;
   display:flex;
-  align-items:center;
+  align-items:start;
   justify-content:space-between;
   flex-direction:row;
   flex-wrap:nowrap;
@@ -45,6 +46,7 @@ main {
 }
 @media screen and (width>800px) {
   .container {
+    align-items:center;
     justify-content:space-around;
   }
 }
@@ -56,6 +58,10 @@ main {
   width:200px;
   display:flex;
   margin:5px;
+  transition:0.96s;
+}
+.container fieldset:hover {
+  transform:scale(1.1) rotateY(360deg);
 }
 @media screen and (width<=800px) {
   .carrosel {
@@ -77,4 +83,25 @@ main {
   border-radius:18px;
   height:100%;
   width:100%;
+}
+.container fieldset > img:hover {
+  opacity:0.12;
+  position:absolute;
+}
+.container fieldset >.sinopse {
+  display:none;
+  transition:all .8s;
+}
+.container fieldset > img:hover  legend {
+  opacity:0;
+}
+.container fieldset > img:hover ~ .sinopse {
+  height:100%;
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  padding:2px;
+  font-size:12px;
 }

@@ -3,8 +3,10 @@
   padding:0;
 }
 menu {
-  display:none;
-  transition:.8s;
+  transition:height .8s, opacity .8s;
+  height:0;
+  opacity:0;
+  overflow:hidden;
 }
 menu > ul {
   list-style-type:none;
