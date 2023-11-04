@@ -2,7 +2,6 @@ main {
   background-color:rgb(32,32,32);
   color:white;
   overflow:hidden;
-  height:100%;
   width:100%;
   margin-bottom:5px;
   display:flex;
@@ -19,7 +18,6 @@ main {
 }
 @media screen and (width<=800px) {
   main {
-    height:100%;
     margin:0;
   }
   .carrossel {
@@ -35,7 +33,7 @@ main {
   border-bottom:2px solid white;
 }
 .container {
-  height:800px;
+  height:400px;
   color:white;
   display:flex;
   align-items:start;
