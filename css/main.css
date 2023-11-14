@@ -4,17 +4,18 @@ main {
   overflow:hidden;
   width:100%;
   margin-bottom:5px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  flex-direction: column;
+  display:grid;
+  grid-template-columns:1fr;
+  grid-template-rows:1fr 1fr;
 }
 .carrossel {
   background-color:rgb(17,17,18);
-  width:100%;
   overflow:hidden;
   margin:5px;
   padding:16px;
+  display:grid;
+  grid-template-columns:1fr;
+  grid-template-rows:1fr;
 }
 @media screen and (width<=800px) {
   main {
@@ -33,39 +34,55 @@ main {
   border-bottom:2px solid white;
 }
 .container {
-  height:400px;
   color:white;
-  display:flex;
-  align-items:start;
-  justify-content:space-between;
-  flex-direction:row;
-  flex-wrap:nowrap;
   overflow:hidden;
+  display:grid;
+  grid-template-areas:
+   "moldura1" "moldura2" "moldura3"
+   "moldura4" "moldura5" "moldura6"
+  ;
+  grid-template-columns:repeat(3,1fr);
 }
-@media screen and (width>800px) {
+#moldura1 {
+  grid-area:"moldura1";
+}
+#moldura2 {
+  grid-area:"moldura2";
+}
+#moldura3 {
+  grid-area:"moldura3";
+}
+#moldura4 {
+  grid-area:"moldura4";
+}
+#moldura5 {
+  grid-area:"moldura5";
+}
+#moldura6 {
+  grid-area:"moldura6";
+}
+@media screen and (width<=800px) {
   .container {
-    align-items:center;
-    justify-content:space-around;
+  grid-template-columns:1fr;
+  grid-template-rows:repeat(3,1fr);
+  gap:10px;
+  }
+  .container >fieldset {
+    width:100%;
+  }
+  .container > fieldset > img {
+    width:100%;
   }
 }
 .container fieldset {
   background-color:#00000000;
   border:3px solid white;
   border-radius:18px;
-  height:250px;
-  width:200px;
-  display:flex;
   margin:5px;
   transition:0.96s;
 }
 .container fieldset:hover {
   transform:scale(1.1) rotateY(360deg);
-}
-@media screen and (width<=800px) {
-  .carrosel {
-    overflow-x:auto;
-  }
-
 }
 .container fieldset > legend {
   position:absolute;
