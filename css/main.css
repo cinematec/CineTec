@@ -81,9 +81,9 @@ main {
   margin:5px;
   transition:0.96s;
 }
-.container fieldset:hover {
+/*.container fieldset:hover {
   transform:scale(1.1) rotateY(360deg);
-}
+}*/
 .container fieldset > legend {
   position:absolute;
   background-color:white;
@@ -99,18 +99,18 @@ main {
   height:100%;
   width:100%;
 }
-.container fieldset > img:hover {
+/*.container fieldset > img:hover {
   opacity:0.12;
   position:absolute;
-}
+}*/
 .container fieldset >.sinopse {
   display:none;
   transition:all .8s;
 }
-.container fieldset > img:hover  legend {
+/*.container fieldset > img:hover  legend {
   opacity:0;
-}
-.container fieldset > img:hover ~ .sinopse {
+}*/
+/*.container fieldset > img:hover ~ .sinopse {
   height:100%;
   width:100%;
   display:flex;
@@ -119,4 +119,4 @@ main {
   flex-direction:column;
   padding:2px;
   font-size:12px;
-}
+}*/
