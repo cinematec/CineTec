@@ -1,6 +1,6 @@
 import Janela from "./janela.js";
 
-const botao = document.getElementById("botao");
-botao.addEventListener("click", () => {
+const botaoMsg = document.getElementById("botaoMsg");
+botaoMsg.addEventListener("click", () => {
   Janela.exibir();
 });
