@@ -2,6 +2,12 @@ import Janela from "./janela.js";
 const molduras = [...document.querySelectorAll("legend")];
 const spans = [...document.querySelectorAll("#span")];
 const botaoMsg = document.getElementById("botaoMsg");
+const config = {
+  header_content:"Mensagem",
+  main_content:"Treinando arduamente",
+  color:"dodgerblue"
+}
+
 botaoMsg.addEventListener("click", () => {
   Janela.exibir();
   molduras.forEach((moldura) => {
