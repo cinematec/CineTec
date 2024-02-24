@@ -23,7 +23,6 @@ class Janela {
     this.destino.appendChild(area_msg);
     
     const header = document.createElement("header");
-    header
   }
   static ocultar() {
     
