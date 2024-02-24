@@ -1,4 +1,4 @@
-var body = document.querySelector("body");
+/*var body = document.querySelector("body");
 async function async() {
   try {
     const resultado = await promise();
@@ -19,4 +19,4 @@ function promise() {
     },5000);
   });
 }
-async();
+async();*/
