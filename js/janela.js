@@ -8,7 +8,7 @@ class Janela {
  /* config(config) {
     
   } */
-  exibir() {
+  static exibir() {
     const area_msg = document.createElement("div");
     const style_area = 
     "background-color: rgba(0,0,0,0.7);" +
@@ -25,7 +25,7 @@ class Janela {
     const header = document.createElement("header");
     header
   }
-  ocultar() {
+  static ocultar() {
     
   }
 }
