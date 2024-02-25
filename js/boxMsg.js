@@ -5,7 +5,7 @@ const botaoMsg = document.getElementById("botaoMsg");
 const config = {
   header_content:"Votação",
   main_content: "Para votar no filme que voce deseja basta acessa o link:",
-  type: "alert"
+  type: "confirm"
 }
 Janela.config(config);
 botaoMsg.addEventListener("click", () => {
