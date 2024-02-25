@@ -10,6 +10,15 @@ class Janela {
     this.header_content = config.header_content;
     this.main_content = config.main_content;
     this.color = config.color;
+    if(config.header_content == undefined) {
+      this.header_content = "Titulo";
+    }
+    if(config.main_content == undefined) {
+      this.main_content = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid similique fuga rerum excepturi, amet, quibusdam laudantium praesentium iure aspernatur. Doloremque amet pariatur eius dicta accusantium id consequuntur quas sequi rerum.";
+    }
+    if(config.color == undefined) {
+      this.color = "#1e1e1e";
+    }
   }
   static exibir() {
     this.area_msg = document.createElement("div");
@@ -108,6 +117,7 @@ class Janela {
     });
   }
   static ocultar() {
+    this.destino.style.overflowY = "";
     this.destino.removeChild(this.area_msg);
     const molduras = [...document.querySelectorAll("legend")];
     const spans = [...document.querySelectorAll("#span")];
