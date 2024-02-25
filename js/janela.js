@@ -81,10 +81,11 @@ class Janela {
     "background-color: #fff;" +
     "border-radius: 0px;" +
     "width: 100%;" +
+    "padding: 5px;" +
     "display: flex;" +
     "align-items: center;" +
     "justify-content: start;" +
-    "text-align: center;" +
+    "text-align: start;" +
     "flex-direction: column;";
     paragrafo.innerHTML = this.main_content;
     main.appendChild(paragrafo);
@@ -118,7 +119,7 @@ class Janela {
     "flex-direction: column;";
     
     const style_botao_cancel =
-    "background-color: #818181;" +
+    "background-color: #9b9393;" +
     "color: #1e1e1e;" +
     "border: none;" +
     "border-radius: 4px;" +
