@@ -2,13 +2,37 @@ import Janela from "./janela.js";
 const molduras = [...document.querySelectorAll("legend")];
 const spans = [...document.querySelectorAll("#span")];
 const botao_votacao = document.getElementById("botao_votacao");
-const config = {
-  header_content:"Votação",
-  main_content: "Para votar no filme que voce deseja basta acessar o link:",
+const botao_apresentacao = document.getElementById("botao_apresentacao");
+
+const config01 = {
+  header_content:"Quem somos nós?",
+  main_content: "Somos uma galera apaixonada por filmes e tecnologia. Nosso grupo espera proporcionar a melhor experiencia cinematográfica para os nossos clientes",
   type: "alert"
 }
-Janela.config(config);
+const config02 = {
+  header_content:"Votação",
+  main_content: "Deseja participar da votação para o próximo filme?",
+  type: "confirm"
+}
+
+botao_apresentacao.addEventListener("click", () => {
+  Janela.config(config01);
+  Janela.exibir();
+  molduras.forEach((moldura) => {
+    moldura.style.opacity = 0;
+  });
+  spans.forEach((span) => {
+    span.style.opacity = 0.5;
+  });
+  molduras.forEach((moldura) => {
+    moldura.style.opacity = 1;
+  });
+  spans.forEach((span) => {
+    span.style.opacity = 1;
+  });
+});
 botao_votacao.addEventListener("click", () => {
+  Janela.config(config02);
   Janela.exibir();
   molduras.forEach((moldura) => {
     moldura.style.opacity = 0;
