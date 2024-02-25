@@ -119,7 +119,7 @@ class Janela {
     "flex-direction: column;";
     
     const style_botao_cancel =
-    "background-color: #9b9393;" +
+    "background-color: #c8c8c8;" +
     "color: #1e1e1e;" +
     "border: none;" +
     "border-radius: 4px;" +
