@@ -5,19 +5,27 @@ class Janela {
   static color = "#1e1e1e";
   static destino = document.body;
   static area_msg = null;
+  static type = null;
+
+  // types: confirm, prompt, alert;
 
   static config(config) {
     this.header_content = config.header_content;
     this.main_content = config.main_content;
     this.color = config.color;
-    if(config.header_content == undefined) {
+    this.type = config.type;
+
+    if (config.header_content == undefined) {
       this.header_content = "Titulo";
     }
-    if(config.main_content == undefined) {
+    if (config.main_content == undefined) {
       this.main_content = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid similique fuga rerum excepturi, amet, quibusdam laudantium praesentium iure aspernatur. Doloremque amet pariatur eius dicta accusantium id consequuntur quas sequi rerum.";
     }
-    if(config.color == undefined) {
+    if (config.color == undefined) {
       this.color = "#1e1e1e";
+    }
+    if (config.type == undefined) {
+      this.type = "alert";
     }
   }
   static exibir() {
@@ -52,6 +60,7 @@ class Janela {
     this.area_msg.prepend(box_msg);
 
     const header = document.createElement("div");
+    const titulo = document.createElement("h3");
     const style_header =
     "background-color:"+this.color+";" +
     "color: #fff;" +
@@ -61,11 +70,13 @@ class Janela {
     "align-items: center;" +
     "justify-content: center;" +
     "flex-direction: column;";
-    header.innerHTML = this.header_content;
+    titulo.innerHTML = this.header_content;
+    header.appendChild(titulo);
     header.setAttribute("style", style_header);
     box_msg.prepend(header);
 
     const main = document.createElement("div");
+    const paragrafo = document.createElement("p");
     const style_main =
     "background-color: #fff;" +
     "border-radius: 0px;" +
@@ -75,12 +86,12 @@ class Janela {
     "justify-content: start;" +
     "text-align: center;" +
     "flex-direction: column;";
-    main.innerHTML = this.main_content;
+    paragrafo.innerHTML = this.main_content;
+    main.appendChild(paragrafo);
     main.setAttribute("style", style_main);
     box_msg.appendChild(main);
 
     const footer = document.createElement("div");
-    const botao_footer = document.createElement("button");
     const style_footer =
     "background-color: #fff;" +
     "color: #fff;" +
@@ -91,7 +102,7 @@ class Janela {
     "align-items: center;" +
     "justify-content: start;" +
     "text-align: center;" +
-    "flex-direction: column;";
+    "flex-direction: row;";
 
     const style_botao_footer =
     "background-color:"+this.color+";" +
@@ -105,16 +116,48 @@ class Janela {
     "justify-content: start;" +
     "text-align: center;" +
     "flex-direction: column;";
+    
+    const style_botao_cancel =
+    "background-color: #818181;" +
+    "color: #1e1e1e;" +
+    "border: none;" +
+    "border-radius: 4px;" +
+    "margin: 3px;" +
+    "padding: 5px 0px 5px 0px;" +
+    "width: 100%;" +
+    "display: flex;" +
+    "align-items: center;" +
+    "justify-content: start;" +
+    "text-align: center;" +
+    "flex-direction: column;";
 
-    botao_footer.innerHTML = "OK";
-    botao_footer.setAttribute("style", style_botao_footer);
-    footer.innerHTML = this.footer_content;
+    if (this.type == "alert") {
+      const botao_footer = document.createElement("button");
+      botao_footer.innerHTML = "OK";
+      botao_footer.setAttribute("style", style_botao_footer);
+      footer.appendChild(botao_footer);
+      botao_footer.addEventListener("click", () => {
+        this.ocultar();
+      });
+    }else if(this.type == "confirm") {
+      const botao_cancel = document.createElement("button");
+      const botao_ok = document.createElement("button");
+      botao_cancel.innerHTML = "Cancel";
+      botao_cancel.setAttribute("style", style_botao_cancel);
+      footer.appendChild(botao_cancel);
+      botao_cancel.addEventListener("click", () => {
+        this.ocultar();
+      });
+      
+      botao_ok.innerHTML = "Ok";
+      botao_ok.setAttribute("style", style_botao_footer);
+      footer.appendChild(botao_ok);
+      botao_ok.addEventListener("click", () => {
+        this.ocultar();
+      });
+    }
     footer.setAttribute("style", style_footer);
-    footer.appendChild(botao_footer);
     box_msg.appendChild(footer);
-    botao_footer.addEventListener("click", () => {
-      this.ocultar();
-    });
   }
   static ocultar() {
     this.destino.style.overflowY = "";
