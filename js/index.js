@@ -20,3 +20,11 @@ function promise() {
   });
 }
 async();*/
+const endpoint = "../json/users.json";
+fetch(endpoint)
+.then(res => res.json())
+.then(res => {
+  console.table(res)
+})
+
+//.catch(err => console.log(err))
