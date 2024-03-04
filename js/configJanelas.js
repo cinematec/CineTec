@@ -1,4 +1,4 @@
-import Janela from "./janela.js";
+import Janela from "https://cdn.jsdelivr.net/gh/theus-iago/prototypes/window_v2.js";
 const molduras = [...document.querySelectorAll("legend")];
 const spans = [...document.querySelectorAll("#span")];
 const botao_votacao = document.getElementById("botao_votacao");
