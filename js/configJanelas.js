@@ -19,32 +19,8 @@ const config02 = {
 botao_apresentacao.addEventListener("click", () => {
   Janela.config(config01);
   Janela.exibir();
-  molduras.forEach((moldura) => {
-    moldura.style.opacity = 0;
-  });
-  spans.forEach((span) => {
-    span.style.opacity = 0.5;
-  });
-  molduras.forEach((moldura) => {
-    moldura.style.opacity = 1;
-  });
-  spans.forEach((span) => {
-    span.style.opacity = 1;
-  });
 });
 botao_votacao.addEventListener("click", () => {
   Janela.config(config02);
   Janela.exibir();
-  molduras.forEach((moldura) => {
-    moldura.style.opacity = 0;
-  });
-  spans.forEach((span) => {
-    span.style.opacity = 0.5;
-  });
-  molduras.forEach((moldura) => {
-    moldura.style.opacity = 1;
-  });
-  spans.forEach((span) => {
-    span.style.opacity = 1;
-  });
 });
