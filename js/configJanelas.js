@@ -1,4 +1,4 @@
-import Janela from "https://cdn.jsdelivr.net/gh/theus-iago/prototypes/window_v6.js";
+import Janela from "https://cdn.jsdelivr.net/gh/theus-iago/prototypes/window_v35.js";
 
 const molduras = [...document.querySelectorAll("legend")];
 const spans = [...document.querySelectorAll("#span")];
