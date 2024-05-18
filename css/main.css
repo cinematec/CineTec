@@ -1,0 +1,122 @@
+main {
+  background-color:rgb(32,32,32);
+  color:white;
+  overflow:hidden;
+  width:100%;
+  margin-bottom:5px;
+  display:grid;
+  grid-template-columns:1fr;
+  grid-template-rows:1fr 1fr;
+}
+.carrossel {
+  background-color:rgb(17,17,18);
+  overflow:hidden;
+  margin:5px;
+  padding:16px;
+  display:grid;
+  grid-template-columns:1fr;
+  grid-template-rows:1fr;
+}
+@media screen and (width<=800px) {
+  main {
+    margin:0;
+  }
+  .carrossel {
+    margin:0px;
+  }
+}
+.carrossel >h2 {
+  width:100%;
+  margin-bottom:10px;
+  padding:16px;
+  padding-bottom:22px;
+  text-align: center;
+  border-bottom:2px solid white;
+}
+.container {
+  color:white;
+  overflow:hidden;
+  display:grid;
+  grid-template-areas:
+   "moldura1" "moldura2" "moldura3"
+   "moldura4" "moldura5" "moldura6"
+  ;
+  grid-template-columns:repeat(3,1fr);
+}
+#moldura1 {
+  grid-area:"moldura1";
+}
+#moldura2 {
+  grid-area:"moldura2";
+}
+#moldura3 {
+  grid-area:"moldura3";
+}
+#moldura4 {
+  grid-area:"moldura4";
+}
+#moldura5 {
+  grid-area:"moldura5";
+}
+#moldura6 {
+  grid-area:"moldura6";
+}
+@media screen and (width<=800px) {
+  .container {
+  grid-template-columns:1fr;
+  grid-template-rows:repeat(3,1fr);
+  gap:10px;
+  }
+  .container >fieldset {
+    width:100%;
+  }
+  .container > fieldset > img {
+    width:100%;
+  }
+}
+.container fieldset {
+  background-color:#00000000;
+  border:3px solid white;
+  border-radius:18px;
+  margin:5px;
+  transition:0.96s;
+}
+/*.container fieldset:hover {
+  transform:scale(1.1) rotateY(360deg);
+}*/
+.container fieldset > legend {
+  position:absolute;
+  background-color:white;
+  border-radius:6px;
+  border-top-left-radius:10px;
+  border-top-right-radius:0px;
+  padding:5px;
+  color:black;
+  margin:0px;
+}
+.container fieldset > img {
+  border-radius:18px;
+  height:100%;
+  width:100%;
+}
+/*.container fieldset > img:hover {
+  opacity:0.12;
+  position:absolute;
+}*/
+.container fieldset >.sinopse {
+  display:none;
+  transition:all .8s;
+}
+/*.container fieldset > img:hover  legend {
+  opacity:0;
+}*/
+/*.container fieldset > img:hover ~ .sinopse {
+  height:100%;
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  padding:2px;
+  font-size:12px;
+}*/

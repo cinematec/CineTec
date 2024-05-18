@@ -1,0 +1,27 @@
+* {
+  margin:0;
+  padding:0;
+}
+menu {
+  transition:height .8s, opacity .8s;
+  height:0;
+  opacity:0;
+  overflow:hidden;
+}
+menu > ul {
+  list-style-type:none;
+  transition:.8s;
+}
+menu > ul > li > a {
+  display:block;
+  padding:10px;
+  text-decoration:none;
+  text-align:center;
+  background-color:rgb(50,50,50);
+  color:white;
+  border-top:2px solid gray;
+  transition:.8s;
+}
+menu > ul > li > a:hover {
+  background-color:gray;
+}

@@ -1,0 +1,34 @@
+.botao {
+  height:50px;
+  width:50px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+label {
+  transition:.4s;
+}
+label:hover {
+  transform:scale(1.08);
+}
+#button {
+  display:none;
+}
+#span {
+  background-color:white;
+  border-radius:6px;
+  display:block;
+  height:4px;
+  width:30px;
+  margin:5px;
+  transition:.4s;
+}
+#button:checked ~ label >#span:nth-child(1) {
+  transform:rotate(40deg) translateY(9px);
+}
+#button:checked ~ label >#span:nth-child(2) {
+  display:none;
+}
+#button:checked ~ label >#span:nth-child(3) {
+  transform:rotate(-40deg) translateX(-3.5px) translateY(-6px);
+}

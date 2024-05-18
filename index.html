@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+  <title>CineTec - Onde cada filme é uma aventura única.</title>
+  <style>
+    body {
+      background-color:rgb(17,17,18);
+      color:white;
+      height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-family:'Poppins',sans-serif;
+    }
+    .container {
+      height:300px;
+      width:300px;
+      overflow:hidden;
+    }
+    #title  {
+      height:100%;
+      padding:3px;
+    }
+    h1 {
+      letter-spacing:0.10cm;
+      margin-left:5px;
+      font-size:2.6rem;
+      text-align:center;
+      animation:title 1.8s  ease-in-out;
+    }
+    @keyframes title {
+      0%{transform:translateX(-500px)}
+      50%{transform:translateX(-250px)}
+      100%{transform:translateX(0px)}
+    }
+    span {
+      color:gray;
+      font-weight:bolder;
+      font-size: 3.5rem;
+    }
+    .loader-area {
+      width:100%;
+      display:flex;
+      justify-content:center;
+    }
+    .loader {
+      height:70px;
+      width:70px;
+      background-color:#ffffff00;
+      border:2px solid #ffffff00;
+      border-radius:50%;
+      border-bottom:5.5px solid white;
+      opacity:0;
+      animation:loader 
+      .88s infinite ease-in-out reverse;
+      animation-delay:1.8s;
+    }
+    @keyframes loader {
+      0%{
+        transform:rotateZ(500deg);
+        opacity:100%;
+      }
+      50%{
+        transform:rotateZ(90deg)
+        opacity:100%;
+      }
+      100%{
+        transform:rotateZ(0deg)
+        opacity:100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="container">
+  <h1><span id="title"><span>C</span></span>ine <span>T</span>ec</h1>
+  <div class="loader-area">
+   <div class="loader"></div>
+  </div>
+  </section>
+  
+  <script>
+  function next() {
+   setTimeout(() => {
+      location.href = 'main.html';
+   },3000);
+  }
+  next();
+  </script>
+</body>
+</html>
