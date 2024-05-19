@@ -180,7 +180,6 @@ class Janela {
     }
     static encaminhar() {
       window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSdkICcO4RNQ_rDTlGl6iY0eRwB0IZ0iaiEak7ZFZ0EDVvjSYw/viewform?usp=sharing";
-      window.location.reload();
     }
 }
 export default Janela;
