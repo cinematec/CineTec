@@ -160,9 +160,8 @@ class Janela {
             botao_ok.setAttribute("style", style_botao_footer);
             footer.appendChild(botao_ok);
             botao_ok.addEventListener("click", () => {
-                window.location.href =
-                    "https://docs.google.com/forms/d/e/1FAIpQLSdkICcO4RNQ_rDTlGl6iY0eRwB0IZ0iaiEak7ZFZ0EDVvjSYw/viewform?usp=sharing";
-            });
+              this.encaminhar();
+            })
         }
         footer.setAttribute("style", style_footer);
         box_msg.appendChild(footer);
@@ -178,6 +177,9 @@ class Janela {
         spans.forEach(span => {
             span.style.opacity = 1;
         });
+    }
+    static encaminhar() {
+      window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSdkICcO4RNQ_rDTlGl6iY0eRwB0IZ0iaiEak7ZFZ0EDVvjSYw/viewform?usp=sharing";
     }
 }
 export default Janela;
